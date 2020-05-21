@@ -62,12 +62,12 @@
             </div>
             <div class="modal-body">
                 <div class="form-group">
-                    <label for="inputSisi">Masukkan sisi:</label>
-                    <input class="form-control" type="text" name="sisi" id="inputSisi" aria-describedby="answerPersegi">
+                    <label for="inputSisi">Masukkan sisi (cm):</label>
+                    <input class="form-control" type="number" id="sisiPersegi" aria-describedby="answerPersegi" onkeypress="numericOnly('sisiPersegi')">
                     <small id="answerPersegi" class="form-text text-muted"></small>
                 </div>
-                <button type='button' class="btn btn-success">Hitung luas</button> 
-                <button type='button' class="btn btn-warning">Hitung keliling</button>
+                <button type='button' class="btn btn-success" onclick="luasPersegi()">Hitung luas</button> 
+                <button type='button' class="btn btn-warning" onclick="kelilingPersegi()">Hitung keliling</button>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
