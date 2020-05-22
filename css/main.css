@@ -1,3 +1,17 @@
 .jumbotron {
-    margin-bottom: 0;
+    position: relative;
+    bottom: 0;
 }
+.footer {
+    position: absolute;
+    bottom: 0;
+}
+.dropright:hover .dropright-menu {
+    display: block;
+    margin-top: 0; 
+ }
+ .tombol {
+     width: 150px;
+     height: 150px;
+     background-color: aliceblue;
+ }

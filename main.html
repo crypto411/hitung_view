@@ -39,45 +39,64 @@
     </nav>
 
     <div class="jumbotron">
-        <h1 class="display-4">PlaceHolder</h1>
-        <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure, voluptatum. Quae vero deleniti
-            at! Et corporis nisi nam assumenda earum!</p>
-        <hr class="my-4">
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque vero, error ex incidunt quam tempore soluta
-            delectus inventore maiores fugit.</p>
-        <p class="lead">
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#persegiModal">Persegi</button>
-        </p>
+        <div class="welcome" id="welcome" style="display: block;">
+            <h3>Selamat datang bllalblalbla</h3>
+            <button type="button" class="btn btn-secondary" onclick="mulaiHitung()">Mulai menghitung</button>
+        </div>
+        <div class="home" id="home" style='display: none;'>
+            <table class="table">
+                <tr>
+                    <td>
+                        <div class="btn-group dropright">
+                            <button type="button" class="btn tombol dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="img/mn_segitiga.png">
+                            </button>
+                            <div class="dropdown-menu">
+                                <!-- Dropdown menu links -->
+                                <button type="button" class="btn" id="luasSegitiga">Luas Segitiga</button>
+                                <button type="button" class="btn" id="kelilingSegitiga">Keliling Segitiga</button>
+                            </div>
+                        </div>
+                    </td>
+                    <td rowspan="5">
+                        <div class="container">
+                            <!-- Form Luas Persegi -->
+                            <div class="LuasPersegi" id="LuasPersegi" style='display: none;'>
+                                <h4>Luas Persegi</h4>
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="label-sisi">Sisi (cm): </span>
+                                    </div>
+                                    <input type="number" min="0" class="form-control" id="sisiPersegi" aria-describedby="label-sisi">
+                                    <button type='button' class='btn btn-primary' onclick="luasPersegi()">Hitung</button>
+                                </div>
+                            </div>
+                            <!-- Hasil / response -->
+                            <small id="answer" class="form-text text-muted">-</small>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <div class="btn-group dropright">
+                            <button type="button" class="btn tombol dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="img/men_persegi.png">
+                            </button>
+                            <div class="dropdown-menu">
+                                <!-- Dropdown menu links -->
+                                <button type="button" class="btn" id="luasPersegi" onclick="show('LuasPersegi')">Luas Persegi</button>
+                                <button type="button" class="btn" id="kelilingPersegi" onclick="show('KelilingPersegi')">Keliling Persegi</button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 
-    <!-- Modal -->
-    <div class="modal fade" id="persegiModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Hitung Persegi</h5>
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label for="inputSisi">Masukkan sisi (cm):</label>
-                    <input class="form-control" type="number" id="sisiPersegi" aria-describedby="answerPersegi" onfocusout="fill('sisiPersegi')" value='1'>
-                    <small id="answerPersegi" class="form-text text-muted"></small>
-                </div>
-                <button type='button' class="btn btn-success" onclick="luasPersegi()">Hitung luas</button> 
-                <button type='button' class="btn btn-warning" onclick="kelilingPersegi()">Hitung keliling</button>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>
-            </div>
-        </div>
-        </div>
-    </div>
 
     <!-- FOOTER -->
-    <footer class="container-fluid" style="background-color: salmon;">
+    <footer class="container-fluid footer" style="background-color: salmon;">
         <div class="row">
             <div class="col-sm">
                 One of three columns
