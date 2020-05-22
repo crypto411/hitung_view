@@ -1,16 +1,8 @@
-var keypress = true;
-document.onkeypress = function (evt) {
-    if(!keypress)
-        return false;
-}
-function numericOnly(id) {
-    var txt = document.getElementById(id).value;
-    if(isNaN(txt)) {
-        keypress = false;
-        return false;
-    }
-    else
-        keypress = true;
+
+function fill(id) {
+    var x = document.getElementById(id).value;
+    if(x == "" || x == null || x == 0)
+        document.getElementById(id).value = 1;
 }
 function luasPersegi() {
     var sisi = document.getElementById("sisiPersegi").value;

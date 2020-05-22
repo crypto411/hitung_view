@@ -63,7 +63,7 @@
             <div class="modal-body">
                 <div class="form-group">
                     <label for="inputSisi">Masukkan sisi (cm):</label>
-                    <input class="form-control" type="number" id="sisiPersegi" aria-describedby="answerPersegi" onkeypress="numericOnly('sisiPersegi')">
+                    <input class="form-control" type="number" id="sisiPersegi" aria-describedby="answerPersegi" onfocusout="fill('sisiPersegi')" value='1'>
                     <small id="answerPersegi" class="form-text text-muted"></small>
                 </div>
                 <button type='button' class="btn btn-success" onclick="luasPersegi()">Hitung luas</button> 
