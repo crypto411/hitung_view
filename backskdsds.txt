@@ -125,3 +125,44 @@
                     <small id="answer" class="form-text text-muted">-</small>
                 </div>
             </div>
+
+
+
+xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
+
+            <div class="hitung-content">
+        <!-- Landing -->
+        <div class="welcome" id="welcome" style="display: block;">
+            <div class="welcome-text">Hitung merupakan aplikasi untuk menghitung rumus bangun datar dengan memasukkan
+                nilai yang diketahui tanpa perlu memasukkan rumus<br><br>Selamat Mencoba ;)
+            </div>
+            <div class="welcome-title">
+                Selamat Datang
+            </div>
+            <button class="welcome-btn" type="button" onclick="mulaiHitung()">Mulai menghitung</button>
+            <img class="welcome-logo" src="img/welcome-kid.png">
+        </div>
+
+        <!-- Tampilan setelah klik mulai -->
+        <div class="home" id="home" style='display: none;'>
+            <!-- Daftar Bangun Datar -->
+            <div class="btn-group-vertical">
+                <!-- Segitiga -->
+                <button type="button" class="btn-bgn">
+                    <img src="img/mn_segitiga.png" width="100" height="100">
+                </button>
+
+                <!-- Persegi -->
+                <button type="button" class='btn-bgn'>
+                    <img src="img/mn_persegi.png" width="100" height="100">
+                </button>
+            </div>
+            <!-- yang mau dihitung -->
+            <div class="hitungan">
+                sdds
+            </div>
+        </div>
+ 
+    </div>

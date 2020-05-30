@@ -1,82 +1,62 @@
-html, body {
-    height:100%;
-    overflow:hidden;
+/* HElPER */
+.opacity {
+    opacity: 0.5;
 }
 
-body {
-    position: fixed;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+.blue-helper {
+    background-color: rgba(0, 0, 255, 0.5);
+}
 
+.green-helper {
+    background-color: rgba(0, 255, 0, 0.5)
+}
+main {
+    padding: 75px;
     background-image: url("../img/bg-web-fix.jpeg");
     background-repeat: no-repeat;
     background-size: 100%;
     background-color: #F9F5F5;
 }
 
-.navbar {
-    background: #F9F5F5;
-}
-.welcome {
-    margin: 50px 5px 50px 5px;
-    padding: 5px 5px 5px 5px;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.58);
-}
-.welcome-title {
-    left: 37.97%;
-    right: 39.79%;
-    top: 20.39%;
-    bottom: 77.04%;
-
-    font-family: Hobo Std;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 30px;
-    line-height: 36px;
-    /* identical to box height */
-
-
-    color: #D33F0F;
-
-    /*border: 1px solid #C64B0B;*/
+.bg-white-transparant {
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 20;
 }
 
-.welcome-text {
-    left: 56.46%;
-    right: 17.4%;
-    top: 29.31%;
-    bottom: 53.38%;
-
-    font-family: Segoe UI;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 24px;
-    line-height: 32px;
-    text-align: center;
-
-    color: #C54F11;
+.size-kid {
+    width: 350px;
+    height: 350px;
+    margin: auto;
 }
 
-.welcome-btn {
-    left: 61.93%;
-    right: 22.81%;
-    top: 52.07%;
-    bottom: 45.27%;
-
-    background: #D33F0F;
+@media (max-width: 425px) {
+    .size-kid {
+        width: 200px;
+        height: 200px;
+        margin: auto;
+    }
 }
 
-.welcome-logo {
-    padding-bottom: 0px;
-    left: 20.21%;
-    right: 53.58%;
-    top: 19.64%;
-    bottom: 32.37%;
-    width: 25%;
-    height: 75%;
+.btn-next{
+    text-decoration: none;
+    margin: 0 auto; 
+}
+
+.btn-next h3 {
+    background-color: #C64B0B;
+    transition: 0.7s ease 0s;
+}
+
+.btn-next button{
+    border-radius: 4px;
+    font-weight: 900;
+    font-size: 15px;
+    color: #f5f5f5;
+    border: none;
+    background-color: #C64B0B;
+    transition: 0.7s ease 0s;
+    padding: 8px;
+    margin: 14px auto;
 }
 
 .hitung-content {
@@ -173,10 +153,13 @@ ul {
     color: #F9F5F5;
 }
 
+.font-poppins-orange {
+    font-family: 'Poppins', arial, sans-serif;
+    font-weight: 400;
+    color: #C64B0B;
+}
+
 footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
     background: #C64B0B;
 }
 
