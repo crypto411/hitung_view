@@ -1,0 +1,127 @@
+ <div class="container" style="display: none;">
+
+                <div class="btn-group" style="display: none;">
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn btn-bgn" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="img/mn_segitiga.png" width="60px" height="60px">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownSegitiga">
+                            <!-- Dropdown menu links -->
+                            <a class="dropdown-item" href="#" id="luasSegitiga">Hitung Luas</a>
+                            <a class="dropdown-item" href="#" id="kelilingSegitiga">Hitung Keliling</a>
+                        </div>
+                    </div>
+
+                    <!-- Persegi -->
+                    <div class="btn-group dropright">
+                        <button id="dropdownPersegi" type="button" class="btn tombol" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            <img src="img/men_persegi.png" width="60px" height="60px">
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownPersegi">
+                            <!-- Dropdown menu links -->
+                            <a class="dropdown-item" href="#" id="luasPersegi" onclick="show('LuasPersegi')">Hitung
+                                Luas</a>
+                            <a class="dropdown-item" href="#" id="kelilingPersegi"
+                                onclick="show('KelilingPersegi')">Hitung Keliling</a>
+                        </div>
+                    </div>
+
+                    <!-- Persegi Panjang-->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn tombol" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="img/mn_persegipanjang.png" width="60px" height="60px">
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" id="luas" onclick="">Hitung Luas</a>
+                            <a class="dropdown-item" href="#" id="keliling" onclick="">Hitung Keliling</a>
+                        </div>
+                    </div>
+
+                    <!-- Lingkaran -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn tombol" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="img/mn_lingkaran.png" width="60px" height="60px">
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" id="luas" onclick="">Hitung Luas</a>
+                            <a class="dropdown-item" href="#" id="keliling" onclick="">Hitung Keliling</a>
+                        </div>
+                    </div>
+
+                    <!-- Trapesium -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn tombol" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="img/mn_trapesium.png" width="60px" height="60px">
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" id="luas" onclick="">Hitung Luas</a>
+                            <a class="dropdown-item" href="#" id="keliling" onclick="">Hitung Keliling</a>
+                        </div>
+                    </div>
+
+                    <!-- Layang-layang -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn tombol" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="img/mn_layang.png" width="60px" height="60px">
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" id="luas" onclick="">Hitung Luas</a>
+                            <a class="dropdown-item" href="#" id="keliling" onclick="">Hitung Keliling</a>
+                        </div>
+                    </div>
+
+                    <!-- Jajar Genjang -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn tombol" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="img/mn_jajargenjang.png" width="60px" height="60px">
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" id="luas" onclick="">Hitung Luas</a>
+                            <a class="dropdown-item" href="#" id="keliling" onclick="">Hitung Keliling</a>
+                        </div>
+                    </div>
+
+                    <!-- Belah Ketupat -->
+                    <div class="btn-group dropright">
+                        <button type="button" class="btn tombol" data-toggle="dropdown" aria-haspopup="true"
+                            aria-expanded="false">
+                            <img src="img/mn_belahketupat.png" width="60px" height="60px">
+                        </button>
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="#" id="luas" onclick="">Hitung Luas</a>
+                            <a class="dropdown-item" href="#" id="keliling" onclick="">Hitung Keliling</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col col-lg-1">
+                <div class="subtombol">
+                    <a href='#'>Hitung Luas</a>
+                    <a href='#'>Hitung Keliling</a>
+                </div>
+            </div>
+            <div class="col form-hitung">
+                <div class="container">
+                    <!-- Form Luas Persegi -->
+                    <div class="LuasPersegi" id="LuasPersegi" style='display: none;'>
+                        <h4>Luas Persegi</h4>
+                        <div class="input-group mb-3">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text" id="label-sisi">Sisi (cm): </span>
+                            </div>
+                            <input type="number" min="0" class="form-control" id="sisiPersegi"
+                                aria-describedby="label-sisi">
+                            <button type='button' class='btn btn-primary' onclick="luasPersegi()">Hitung</button>
+                        </div>
+                    </div>
+                    <!-- Hasil / response -->
+                    <small id="answer" class="form-text text-muted">-</small>
+                </div>
+            </div>

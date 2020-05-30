@@ -28,6 +28,7 @@ function show(id) {
 function hide(id) {
     document.getElementById(id).style.display = "none";
 }
+
 function mulaiHitung() {
     document.getElementById('welcome').style.display = "none";
     document.getElementById('home').style.display = "block";
