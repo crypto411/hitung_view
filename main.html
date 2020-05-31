@@ -17,7 +17,7 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg">
-        <a class="navbar-brand" href="#"><img src="img/hitung-brand-logo.png" alt="Hitung Brand Logo"
+        <a class="navbar-brand" href="#"><img src="img/hitung-brand-logo.png" onclick="hide(curForm)" alt="Hitung Brand Logo"
                 id="hitung-logo"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
             aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,7 +41,7 @@
     <main class="container-fluid">
 
         <!-- Landing-Welcoming Page -->
-        <div class="container-md bg-white-transparant pt-4 pb-4">
+        <div id="welcome" class="container-md bg-white-transparant pt-4 pb-4">
             <div class="col-md-12">
                 <div class="row justify-content-center">
                     <h1 class="font-poppins-orange">Selamat Datang di Hitung</h1>
@@ -54,10 +54,384 @@
                         <h3 class="font-poppins-orange">Hitung merupakan aplikasi untuk menghitung rumus bangun datar dengan memasukkan nilai yang diketahui tanpa perlu memasukkan rumus</h3>
                         <h3 class="font-poppins-orange">Selamat Mencoba :)</h3>
                         <a href="#" class="btn-next font-poppins-white ">
-                            <button>Mulai Menghitung</button>
+                            <button onclick="mulaiHitung()">Mulai Menghitung</button>
                         </a>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- Mulai Hitung -->
+        <div id="home" class="container-lg">
+            <div class="row">
+                        <div class="col col-lg-3">
+                            <div class="btn-group-vertical">
+
+                                <div id="segitigaDD" class="btn-group-vertical dropright">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/mn_segitiga.png" alt="Segitiga"></a>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" type="button" onclick="show('lSegitigaF')">Hitung luas</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button class="dropdown-item" type="button" onclick="show('kSegitigaF')">Hitung keliling</button>
+                                    </div>
+                                </div>
+
+                                <div id="persegiDD" class="btn-group-vertical dropright">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/mn_persegi.png" alt="Persegi"></a>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" type="button" onclick="show('lPersegiF')">Hitung luas</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button class="dropdown-item" type="button" onclick="show('kPersegiF')">Hitung keliling</button>
+                                    </div>
+                                </div>
+
+                                <div id="persegipDD" class="btn-group-vertical dropright">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/mn_persegipanjang.png" alt="Persegi Panjang"></a>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" type="button" onclick="show('lPersegiPF')">Hitung luas</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button class="dropdown-item" type="button" onclick="show('kPersegiPF')">Hitung keliling</button>
+                                    </div>
+                                </div>
+
+                                <div id="lingkaranDD" class="btn-group-vertical dropright">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/mn_lingkaran.png" alt="Lingkaran"></a>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" type="button" onclick="show('lLingkaranF')">Hitung luas</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button class="dropdown-item" type="button" onclick="show('kLingkaranF')">Hitung keliling</button>
+                                    </div>
+                                </div>
+
+                                <div id="trapesiumDD" class="btn-group-vertical dropright">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/mn_trapesium.png" alt="Trapesium"></a>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" type="button" onclick="show('lTrapesiumF')">Hitung luas</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button class="dropdown-item" type="button" onclick="show('kTrapesiumF')">Hitung keliling</button>
+                                    </div>
+                                </div>
+
+                                <div id="layangDD" class="btn-group-vertical dropright">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/mn_layang.png" alt="Layang-layang"></a>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" type="button" onclick="show('lLayangF')">Hitung luas</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button class="dropdown-item" type="button" onclick="show('kLayangF')">Hitung keliling</button>
+                                    </div>
+                                </div>
+
+                                <div id="jajarDD" class="btn-group-vertical dropright">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/mn_jajargenjang.png" alt="Jajar Genjang"></a>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" type="button" onclick="show('lJajarGF')">Hitung luas</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button class="dropdown-item" type="button" onclick="show('kJajarGF')">Hitung keliling</button>
+                                    </div>
+                                </div>
+
+                                <div id="belahDD" class="btn-group-vertical dropright">
+                                    <a href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="img/mn_belahketupat.png" alt="Belah Ketupat"></a>
+                                    <div class="dropdown-menu">
+                                        <button class="dropdown-item" type="button" onclick="show('lBelahKF')">Hitung luas</button>
+                                        <div class="dropdown-divider"></div>
+                                        <button class="dropdown-item" type="button" onclick="show('kBelahKF')">Hitung keliling</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col" style='background-color: rgba(255, 255, 255, 0.73);box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);'>
+                            <div id="form_hitung" class="container pl-5 pr-5 pt-5 pb-5">
+
+                                <!-- Satuan -->
+                                <div id="satuanF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-2">
+                                            <label for="satuan" style="padding-bottom: 10px;">Satuan</label>
+                                            <select class="custom-select mr-sm-2" id="satuan" onchange="changeSatuan()">
+                                                <option value="cm" selected>cm</option>
+                                                <option value="dm">dm</option>
+                                                <option value="mm">mm</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Segitiga -->
+                                <div id="lSegitigaF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="alass">Alas</label>
+                                            <input type="number" class="form-control" id="alass" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="tinggis">Tinggi</label>
+                                            <input type="number" class="form-control" id="tinggis" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Luas Segitiga</h3>
+                                        <button type="button" onclick="lSegitiga()">Hitung</button>
+                                    </div>
+                                </div>
+                                <div id="kSegitigaF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="sisis_1">Sisi 1</label>
+                                            <input type="number" class="form-control" id="sisis_1" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="sisis_2">Sisi 2</label>
+                                            <input type="number" class="form-control" id="sisis_2" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="sisis_3">Sisi 3</label>
+                                            <input type="number" class="form-control" id="sisis_3" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Keliling Segitiga</h3>
+                                        <button type="button" onclick="kSegitiga()">Hitung</button>
+                                    </div>
+                                </div>
+
+                                <!-- Persegi -->
+                                <div id="lPersegiF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="lsisip">Sisi</label>
+                                            <input type="number" class="form-control" id="lsisip" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Luas Persegi</h3>
+                                        <button type="button" onclick="lPersegi()">Hitung</button>
+                                    </div>
+                                </div>
+                                <div id="kPersegiF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="ksisip">Sisi</label>
+                                            <input type="number" class="form-control" id="ksisip" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Keliling Persegi</h3>
+                                        <button type="button" onclick="kPersegi()">Hitung</button>
+                                    </div>
+                                </div>
+
+                                <!-- Persegi Panjang -->
+                                <div id="lPersegiPF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="lpanjangpp">Panjang</label>
+                                            <input type="number" class="form-control" id="lpanjangpp" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="llebarpp">Lebar</label>
+                                            <input type="number" class="form-control" id="llebarpp" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Luas Persegi Panjang</h3>
+                                        <button type="button" onclick="lPersegiP()">Hitung</button>
+                                    </div>
+                                </div>
+                                <div id="kPersegiPF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="kpanjangpp">Panjang</label>
+                                            <input type="number" class="form-control" id="kpanjangpp" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="klebarpp">Lebar</label>
+                                            <input type="number" class="form-control" id="klebarpp" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Keliling Persegi Panjang</h3>
+                                        <button type="button" onclick="kPersegiP()">Hitung</button>
+                                    </div>
+                                </div>
+
+                                <!-- Lingkaran -->
+                                <div id="lLingkaranF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="ljaril">Jari-jari</label>
+                                            <input type="number" class="form-control" id="ljaril" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Luas Lingkaran</h3>
+                                        <button type="button" onclick="lLingkaran()">Hitung</button>
+                                    </div>
+                                </div>
+                                <div id="kLingkaranF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="kdiameterl">Diameter</label>
+                                            <input type="number" class="form-control" id="kdiameterl" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Keliling Lingkaran</h3>
+                                        <button type="button" onclick="kLingkaran()">Hitung</button>
+                                    </div>
+                                </div>
+
+                                <!-- Trapesium -->
+                                <div id="lTrapesiumF">
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="lat">A</label>
+                                            <input type="number" class="form-control" id="lat" required>
+                                        </div>
+                                        <div class="form-group col">
+                                            <label for="lbt">B</label>
+                                            <input type="number" class="form-control" id="lbt" required>
+                                        </div>
+                                        <div class="form-group col">
+                                            <label for="ltt">T</label>
+                                            <input type="number" class="form-control" id="ltt" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Luas Trapesium</h3>
+                                        <button type="button" onclick="lTrapesium()">Hitung</button>
+                                    </div>
+                                </div>
+                                <div id="kTrapesiumF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="ksisit_1">Sisi 1</label>
+                                            <input type="number" class="form-control" id="ksisit_1" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="ksisit_2">Sisi 2</label>
+                                            <input type="number" class="form-control" id="ksisit_2" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="ksisit_3">Sisi 3</label>
+                                            <input type="number" class="form-control" id="ksisit_3" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="ksisit_4">Sisi 4</label>
+                                            <input type="number" class="form-control" id="ksisit_4" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Keliling Trapesium</h3>
+                                        <button type="button" onclick="kTrapesium()">Hitung</button>
+                                    </div>
+                                </div>
+
+                                <!-- Layang-layang -->
+                                <div id="lLayangF">
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="ldiagonall_1">Diagonal 1</label>
+                                            <input type="number" class="form-control" id="ldiagonall_1" required>
+                                        </div>
+                                        <div class="form-group col">
+                                            <label for="ldiagonall_2">Diagonal 2</label>
+                                            <input type="number" class="form-control" id="ldiagonall_2" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Luas Layang-layang</h3>
+                                        <button type="button" onclick="lLayang()">Hitung</button>
+                                    </div>
+                                </div>
+                                <div id="kLayangF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="kal">A</label>
+                                            <input type="number" class="form-control" id="kal" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="kcl">C</label>
+                                            <input type="number" class="form-control" id="kcl" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Keliling Layang-layang</h3>
+                                        <button type="button" onclick="kLayang()">Hitung</button>
+                                    </div>
+                                </div>
+
+                                <!-- Jajar Genjang -->
+                                <div id="lJajarGF">
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="lalasj">Alas</label>
+                                            <input type="number" class="form-control" id="lalasj" required>
+                                        </div>
+                                        <div class="form-group col">
+                                            <label for="ltinggij">Tinggi</label>
+                                            <input type="number" class="form-control" id="ltinggij" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Luas Jajar Genjang</h3>
+                                        <button type="button" onclick="lJajar()">Hitung</button>
+                                    </div>
+                                </div>
+                                <div id="kJajarGF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="kaj">Alas</label>
+                                            <input type="number" class="form-control" id="kaj" required>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="kbj">Miring</label>
+                                            <input type="number" class="form-control" id="kbj" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Keliling Jajar Genjang</h3>
+                                        <button type="button" onclick="kJajar()">Hitung</button>
+                                    </div>
+                                </div>
+
+                                <!-- Belah Ketupat -->
+                                <div id="lBelahKF">
+                                    <div class="form-row">
+                                        <div class="form-group col">
+                                            <label for="ldiagonalb_1">Diagonal 1</label>
+                                            <input type="number" class="form-control" id="ldiagonalb_1" required>
+                                        </div>
+                                        <div class="form-group col">
+                                            <label for="ldiagonalb_2">Diagonal 2</label>
+                                            <input type="number" class="form-control" id="ldiagonalb_2" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Luas Belah Ketupat</h3>
+                                        <button type="button" onclick="lBelah()">Hitung</button>
+                                    </div>
+                                </div>
+                                <div id="kBelahKF">
+                                    <div class="form-row">
+                                        <div class="form-group col-md-6">
+                                            <label for="ksisib">Sisi</label>
+                                            <input type="number" class="form-control" id="ksisib" required>
+                                        </div>
+                                    </div>
+                                    <div class="actions">
+                                        <h3>Keliling Belah Ketupat</h3>
+                                        <button type="button" onclick="kBelah()">Hitung</button>
+                                    </div>
+                                </div>
+
+                                <!-- Jawaban -->
+                                <div id="answer">
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                
             </div>
         </div>
 
@@ -110,8 +484,7 @@
         integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
         crossorigin="anonymous"></script>
     <!-- ok -->
-    <script src="js/response.js"></script>
-    <script src="js/dropdownhover.js"></script>
+    <script src="js/response.js?version=51"></script>
 </body>
 
 </html>
