@@ -90,7 +90,7 @@ main {
 
 .form-group label {
     padding-bottom: 50px;
-    font-family: Bahnschrift;
+    font-family: "Bahnschrift";
     font-size: 25px;
     line-height: 30px;
     color: #C64B0B;
@@ -146,6 +146,9 @@ main {
     display: block;
 }
 #jajarDD:hover .dropdown-menu {
+    display: block;
+}
+#belahDD:hover .dropdown-menu {
     display: block;
 }
 
@@ -239,6 +242,18 @@ main {
 
 /* FOOTER */
 
+.bottom {
+    position: relative;
+    bottom: 0;
+}
+
+@media (min-width: 1440px) {
+    .bottom {
+        position: absolute;
+        bottom: 0;
+    }
+}
+
 ul {
     list-style-type: none;
 }
@@ -289,3 +304,4 @@ footer {
 .footer-icon:hover {
     opacity: 0.75;
 }
+
